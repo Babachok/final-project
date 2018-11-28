@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Babak</title>
+	<link rel="stylesheet" href="fa/css/all.css">
+	<link rel="stylesheet" href="css/style.css">	
+</head>
+<body>
+	<header class = "header-fixed">
+		<div class = "section">
+			<div class = "top-menu hidden" id = "top-menu">
+				<div id = "small-logo">
+							<a href = "#">
+								<img alt = "Logo" src="./img/Logo.png">
+							</a>					
+						</div>
+						<input type="checkbox" id="menu-change" hidden>
+					<label for="menu-change" class="hamburger">
+						<span class = "first-span"></span>
+						<span class = "second-span"></span>
+						<span class = "third-span"></span>
+					</label>
+				<div class = "block block-menu">
+					<div class = "content">
+								<ul class = "menu">
+									<li class = "first line">
+										<a href="receipt.html" class="active-trail active">Рецепти</a>
+										<input type = "hidden" id = "post-filter" value="" name = "post-filter">
+										<i class="fas fa-chevron-down"></i>
+										<ul class="submenu">
+		            						<li><a class="filter" data-filter = "first">перші страви</a></li>
+		            						<li><a class="filter" data-filter = "second">другі страви</a></li>
+		            						<li><a class="filter" data-filter = "third">десерти</a></li>
+		          						</ul>
+									</li>
+									<li class = "second line">
+										<a href="#contact-block" title="" class="active-trail active">Контакти</a>
+										<i class="fas fa-chevron-down"></i>
+										<ul class="submenu">
+		            						<li><a href="#contact-block">телефон</a></li>
+		            						<li><a href="#contact-block">пошта</a></li>
+		            						<li><a href="#contact-block">адрес</a></li>
+		          						</ul>
+									</li>
+									<li class = "last line">
+										<a href="/receipts-list" title="" class="active-trail active">Партнери</a>
+										<i class="fas fa-chevron-down"></i>
+										<ul class="submenu">
+		            						<li><a href="">bestfood.com</a></li>
+		            						<li><a href="">smachno.net</a></li>
+		            						<li><a href="">niamniam.net</a></li>
+		          						</ul>
+									</li>
+								</ul>
+					</div>							
+						</div>
+			</div>
+			<div class="block block-search">
+				<div class = "small-search">
+						<button id="small-button-search" class="small-button-search fas fa-search"></button>
+				</div>
+				<div id = "big-search-wrapper">
+				<div class = "big-search-block">						
+					<input title="Enter search word" type="text" id="search-block" name="search_block_form" value="" size="40" maxlength="128" class="form-text">
+					<label for="search-block"></label>
+				</div>
+				<div class = "button-wrapper">
+					<button id = "button-search" class="button-search fas fa-search"></button>
+				</div>
+				</div>				
+			</div>
+		</div>		
+	</header>
+	<main class = "page-wrapper">
+		<div class = "page">
+			<div id = "header">
+				<div class = "right-block">
+					<div class = "top-wrapper">
+						<div id = "login">Вхід</div>
+						<div id = "sign-up">Реєстрація</div>
+					</div>
+					<div class = "login-box hidden" id = "login-box">
+						<form name="test" method="get" action="Index.php">
+						<fieldset>
+							<div class = "form-group">
+		         				<label for="name-login">Ім'я</label>
+		         				<div class = "input-wrapper"> 
+			         				<i class="fa fa-user"></i>
+			   						<input type="text" id = "name-login" placeholder="Введіть ім'я">
+		   						</div>
+	  						</div>
+	  						<div class = "form-group">
+		  						<label for="password-login">Пароль</label>
+		  						<div class = "input-wrapper"> 
+			  						<i class="fa fa-key"></i>
+			   						<input type="password" id="password-login" placeholder="Введіть пароль">
+		   						</div>
+	  						</div>
+	  						<button class = "button-login">Відправити</button>
+	  					</fieldset>
+	  					
+ 						</form>
+					</div>
+					<div class = "registr-box hidden" id = "registr-box">
+						<form name="test" method="get" action="Index.php">
+						<fieldset>
+							<div class = "form-group">
+		         				<label for="name-registr">Ім'я</label>
+		         				<div class = "input-wrapper"> 
+			         				<i class="fa fa-user"></i>
+			   						<input type="text" id = "name-registr" placeholder="Введіть ім'я">
+		   						</div>
+	  						</div>
+	  						<div class = "form-group">
+	  							<label for="email">Пошта</label>
+	   							<input type="email" id = "email" placeholder="Введіть email">
+	   						</div>	
+	  						<div class = "form-group">
+		  						<label for="password-registr">Пароль</label>
+		  						<div class = "input-wrapper"> 
+			  						<i class="fa fa-key"></i>
+			   						<input type="password" id="password-registr" placeholder="Введіть пароль">
+		   						</div>
+	  						</div>
+	  						<button class = "button-login">Відправити</button>
+	  					</fieldset>
+	  					
+ 						</form>
+					</div>
+
+				</div>
+				<div class = "section clearfix">
+					<div id = "big-logo">
+						<a href = "#">
+							<img  alt = "logo" src="./img/Logo-1.png">
+						</a>					
+					</div>
+					<div class = "block block-menu">
+						<div class = "content">
+							<ul class = "menu">
+								<li class = "first line">
+									<a href="receipt.html" class="active-trail active">Рецепти</a>
+									<input type = "hidden" id = "post-filter" value="" name = "post-filter">
+									<i class="fas fa-chevron-down"></i>
+									<ul class="submenu">
+	            						<li><a class="filter" data-filter = "first">перші страви</a></li>
+	            						<li><a class="filter" data-filter = "second">другі страви</a></li>
+	            						<li><a class="filter" data-filter = "third">десерти</a></li>
+	          						</ul>
+								</li>
+								<li class = "second line">
+									<a href="#contact-block" title="" class="active-trail active">Контакти</a>
+									<i class="fas fa-chevron-down"></i>
+									<ul class="submenu">
+	            						<li><a href="#contact-block">телефон</a></li>
+	            						<li><a href="#contact-block">пошта</a></li>
+	            						<li><a href="#contact-block">адрес</a></li>
+	          						</ul>
+								</li>
+								<li class = "last line">
+									<a href="/receipts-list" title="" class="active-trail active">Партнери</a>
+									<i class="fas fa-chevron-down"></i>
+									<ul class="submenu">
+	            						<li><a href="">bestfood.com</a></li>
+	            						<li><a href="">smachno.net</a></li>
+	            						<li><a href="">niamniam.net</a></li>
+	          						</ul>
+								</li>
+							</ul>
+						</div>
+						<div class = slider>
+							<input type="radio" id="i1" name="images" checked />
+							<input type="radio" id="i2" name="images" />
+							<input type="radio" id="i3" name="images" />
+							<div class="slide_img" id="one">	
+								<img alt = "slide-1" src="./img/1-slide.jpg">			
+								<label class="prev" for="i5"><span>&#x2039;</span></label>
+								<label class="next" for="i2"><span>&#x203a;</span></label>		
+							</div>
+							<div class="slide_img" id="two">		
+								<img alt = "slide-2" src="./img/2-slide.jpg" >	
+								<label class="prev" for="i1"><span>&#x2039;</span></label>
+								<label class="next" for="i3"><span>&#x203a;</span></label>		
+							</div>			
+							<div class="slide_img" id="three">
+								<img alt = "slide-3" src="./img/3-slide.jpg">	
+								<label class="prev" for="i2"><span>&#x2039;</span></label>
+								<label class="next" for="i4"><span>&#x203a;</span></label>
+							</div>
+							<div id="nav_slide">
+								<label for="i1" class="dots" id="dot1"></label>
+								<label for="i2" class="dots" id="dot2"></label>
+								<label for="i3" class="dots" id="dot3"></label>
+							</div>
+						</div>
+						<div id = "sort">
+							<button id = "button-sort">Відсортувати за алфавітом</button>
+							<input type = "hidden" id = "sort-filter" value="" name = "sort-filter">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = "main-wrapper">
+				<div class = "main clearfix">
+					<div id="content" class = "column clearfix">
+						<div id="receipts-list"></div>
+						<div class = "item-list clearfix">
+							<input type = "hidden" id = "page" value="0" name = "page">
+							<ul class="pager" id="pager">			
+							</ul>
+						</div>						
+					</div>
+					<section>
+				
+				<div class="wrapper-contact-block" id = "contact-block">
+                    <div class="contact-block" >
+                        <div class="fas fa-phone"></div>
+                        <div class="info">
+                            <p class="align-center"><a href="tel:+38000000000">+38 000 000 000</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="fas fa-map-marker-alt"></div>
+                        <div class="info">
+                            <p class="align-center">Ukraine, 61002</p>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="fas fa-envelope"></div>
+                        <div class="info">
+                            <p class="align-center"><a href="mailto:hello@.com">hello@.com</a></p>
+                        </div>
+                    </div>
+                </div>                
+                <div class="map-responsive">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.092462289435!2d30.518551949965026!3d50.42074889728697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf180e6c43e9%3A0x3a9ea5534d4bd9a3!2z0J_QsNC70LDRhiAi0KPQutGA0LDRl9C90LAi!5e0!3m2!1suk!2sua!4v1537083356484" width="600" height="450" style="border:0" allowfullscreen>			
+					</iframe> 
+				</div>
+			</section>	
+				</div>
+				
+			</div>
+
+		</div>
+	</main>
+	<footer class = "footer copyright">
+		© Copyright 2018. All Rights Reserved.		
+	</footer>	
+	<script src="js/comments.js"></script>
+	<script src="js/posts.js"></script>
+	<script src="js/main.js"></script>	
+</body>
+</html>

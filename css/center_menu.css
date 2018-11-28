@@ -1,0 +1,109 @@
+#header .section {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#header {
+	  height: 600px;
+	  margin-top: 60px;
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.menu {
+    width: 500px;
+    height: 30px;
+    margin: 0px auto;
+    padding: 0;
+    padding-left: 30px;
+    border-top: solid #cfcfcf 1px;
+    border-bottom: solid #cfcfcf 1px;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.block-menu .menu li {
+    float: left;
+    width: 150px;
+    padding-top: 5px;
+}
+
+#header .section #big-logo {
+    width: 160px;
+    margin: 0px auto;    
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+
+.block-menu .menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ea5a15;
+    font: 15px arial;
+    letter-spacing: 2px;
+}
+
+.fa-chevron-down {
+	  color: #5a5552;
+}
+
+.menu li a:hover { 
+	  color: #273037; 
+}
+
+.menu .submenu li a:hover {
+	  color: #fdfbfa;
+}
+
+.menu .submenu li{
+    border-bottom: 1px solid rgba(255,255,255,.1);
+
+}
+
+.menu .submenu li a {
+    text-transform: none;
+}
+
+.submenu {
+    background: #273037;
+    position: absolute;  
+    top: 100%; 
+    width: 130px;
+    opacity: 0;
+    padding-left:0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    z-index: 5;
+    transition: .5s ease-in-out;
+}
+
+.submenu a {
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 13px;
+  
+}
+
+.submenu li:last-child a { 
+  	border-bottom: none; 
+}
+
+.menu > li:hover .submenu {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.second .submenu{
+  	left: 175px;
+}
+
+.last .submenu{
+  	right: 0;
+  	width: 200px;
+}

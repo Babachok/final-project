@@ -1,0 +1,75 @@
+/*main content_gallery*/
+
+.main-wrapper {
+	position: relative;
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#receipts-list .receipts-list-item img {
+    width: 170px;
+    height: 170px;
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid #adadad;
+}
+
+.receipts-list-item {    
+    float: left;
+    width: 200px;
+    height: 230px;
+    position: relative;   
+}
+
+.receipt-ing {
+	opacity: 0;
+	width: 120px;
+    height: 70px;
+    padding: 5px;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    background-color: #f4c8a7;
+}
+
+#receipts-list .receipts-list-item h3 {
+    width: 180px;
+    margin-top: 0px;
+    padding-left: 4px;
+    font-family: georgia,"times new roman",times,serif;
+    font-size: 13px;
+    color: #ea5a15;
+}
+
+.receipts-list-item:hover .receipt-ing {
+	opacity: 1;
+}
+
+/*pagination*/
+
+.item-list .pager {
+    width: 200px;
+    height: 40px;
+    margin: 0px auto;
+    padding-top: 12px;
+}
+
+.item-list .pager li {
+    float: left;
+    margin-left: 10px;
+    padding: 5px 0 0 0;
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #e4e1df;;
+    text-align: center;    
+}
+
+.item-list .pager li .red {
+	background-color: red;
+}
+
+.item-list .pager li:hover {
+	cursor: pointer;
+	background-color: #ea5a15;
+}

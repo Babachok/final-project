@@ -1,0 +1,91 @@
+.header-fixed {
+	position:fixed;
+	width:100%;
+	height:60px;
+	top: 0;
+	background-color: #ea5a15;
+	box-shadow: 0px 4px 8px rgba(3,59,49,0.5);
+	z-index: 12;	
+	/*background:url(/sites/all/themes/vkusnoblog/images/top.png);
+	box-shadow:0px 5px 5px 0px #ccc;
+	-webkit-box-shadow:0px 5px 5px 0px #ccc;
+	-moz-box-shadow:0px 5px 5px 0px #ccc;*/
+}
+
+.header-fixed .section {
+	position: relative;
+    width: 1000px;
+    margin: 0px auto;
+    height: 60px;
+}
+
+.top-menu {
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.top-menu .menu {
+    border: none;
+}
+
+.top-menu .block-menu .menu li a {
+    color: white;
+
+}
+
+.top-menu .block-menu .menu .submenu a {
+    color: #ea5a15;
+}
+
+.top-menu .menu li a:hover { 
+    color: #273037; 
+}
+
+.top-menu .menu .submenu li a:hover {
+    color: #fdfbfa;
+}
+
+.block-search {
+	position: absolute;
+    right: 0px;
+    margin-top: 20px;
+}
+
+#search-block {
+	border-radius: 5px;    
+    border: none;
+    width: 250px;
+}
+
+#big-search-wrapper {
+    position: relative;
+}
+
+.button-wrapper {
+	position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+.button-search {
+	border: none;
+	background-color: transparent;
+    color: #ea5a15;
+    padding-top: 4px;
+
+}
+
+
+.small-search {
+    display: none;
+    
+}
+
+.small-button-search {
+    background-color: transparent;
+    color: white;
+    padding-top: 4px;
+    border: none;
+}

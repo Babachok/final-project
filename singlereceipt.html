@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Babak</title>
+	<link rel="stylesheet" href="fa/css/all.css">
+	<link rel="stylesheet" href="css/style.css">	
+</head>
+<body>
+	<header class = "header-fixed">
+		<div class = "section">
+			<div class="block block-search">
+				<div class = "form-search-block">					
+					<input title="Enter search word" type="text" id="search-block" name="search_block_form" value="" size="40" maxlength="128" class="form-text">
+					<label for="search-block"></label>
+				</div>
+				<div class = "button-wrapper">
+					<button id = "button-search" class="button-search fas fa-search"></button>
+				</div>				
+			</div>
+		</div>		
+	</header>
+	<main class = "page-wrapper">
+		<div class = "page">
+			<div class = "header">
+				<div class = "section clearfix">
+					<div id = "big-logo">
+						<a href = "index.html">
+							<img alt = "logo" src="./img/Logo-1.png">
+						</a>					
+					</div>
+					<div class = "block block-menu">
+						<div class = "content">
+							<ul class = "menu">
+								<li class = "first line">
+									<a href="receipt.html" title="" class="active-trail active">Рецепти</a>
+									<input type = "hidden" id = "post-filter" value="" name = "post-filter">
+									<i class="fas fa-chevron-down"></i>
+									<ul class="submenu">
+	            						<li><a class="filter" data-filter = "first">перші страви</a></li>
+	            						<li><a class="filter" data-filter = "second">другі страви</a></li>
+	            						<li><a class="filter" data-filter = "third">десерти</a></li>
+	          						</ul>
+								</li>
+								<li class = "second line">
+									<a href="index.html#contact-block" title="" class="active-trail active">Контакти</a>
+									<i class="fas fa-chevron-down"></i>
+									<ul class="submenu">
+	            						<li><a href="index.html#contact-block">телефон</a></li>
+	            						<li><a href="index.html#contact-block">пошта</a></li>
+	            						<li><a href="index.html#contact-block">адрес</a></li>
+	          						</ul>
+								</li>
+								<li class = "last line">
+									<a href="/receipts-list" title="" class="active-trail active">Партнери</a>
+									<i class="fas fa-chevron-down"></i>
+									<ul class="submenu">
+	            						<li><a href="">bestfood.com</a></li>
+	            						<li><a href="">smachno.net</a></li>
+	            						<li><a href="">niamniam.net</a></li>
+	          						</ul>
+								</li>
+							</ul>
+						</div>						
+					</div>
+				</div>
+			</div>
+			<div class = "main-wrapper">
+				<div class = "main clearfix">
+					<div id="content" class = "column clearfix">
+						<div id="receipts-post"></div>
+						<div class = "item-list clearfix">
+							<input type = "hidden" id = "page" value="0" name = "page">
+							<ul class="pager" id="pager">			
+							</ul>
+						</div>						
+					</div>
+					
+				</div>
+				
+			</div>
+
+		</div>
+	</main>
+	<footer class = "footer copyright">
+		© Copyright 2018. All Rights Reserved.		
+	</footer>	
+</body>
+<script src="js/users.js"></script>
+<script src="js/comments.js"></script>
+<script src="js/posts.js"></script>
+<script async src="js/singlereceipt.js"></script>
+</html>

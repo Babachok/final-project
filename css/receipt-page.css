@@ -1,0 +1,83 @@
+.header .section {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+.header {
+	height: 135px;
+	margin-top: 80px;
+}
+
+.header .menu {
+    width: 500px;
+    height: 30px;
+    margin: 0px auto;
+    padding: 0;
+    padding-left: 30px;
+    border-top: solid #cfcfcf 1px;
+    border-bottom: solid #cfcfcf 1px;
+    position: relative;
+}
+
+.header .block-menu .menu li {
+    float: left;
+    width: 150px;
+    padding-top: 5px;
+}
+
+.header .section #big-logo {
+    width: 160px;
+    margin: 0px auto;    
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+.username {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+}
+
+.comments {
+    display:none;
+}
+.more {
+    display: block;
+}
+
+.receipts-post-item {
+    position: relative;
+    background-color: #ebccbd;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 7px 13px 2px rgba(3,59,49,0.3);
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #ea5a15;
+    font-family: georgia,"times new roman",times,serif;
+}
+
+.receipt-wrapper {
+    display: flex;
+}
+
+.receipt-wrapper p {
+    margin: 15px;
+}
+
+.receipts-post-item ul {
+    padding: 0;
+}
+
+.read-more {
+    position: absolute;
+    right: 30px;
+    top: 180px;
+    cursor: pointer;
+    color: #ea5a15;
+    font-family: georgia,"times new roman",times,serif;
+}

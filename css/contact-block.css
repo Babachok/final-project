@@ -1,0 +1,90 @@
+h2 {
+	color: #ea5a15;
+	text-align: center;
+}
+
+.wrapper-contact-block {   
+    display: flex;
+    box-sizing: border-box;
+    margin-top:20px;
+}
+
+.contact-block {
+    box-sizing: border-box;
+    width: 33.33333%;
+    height: 220px;
+    border: 1px solid hsla(0,0%,51%,.3);
+}
+
+.contact-block .fas {
+	display: flex;
+    box-sizing: border-box;
+    height: 50%;
+    border: 1px solid hsla(0,0%,51%,.3);
+    border-right: 0;
+    border-left: 0;
+    justify-content: center;
+    align-items: center;
+    color: #ea5a15;
+}
+
+.info-block {
+	display:flex;
+	justify-content: space-around;
+	background-color: #f9b0de;
+	margin-top: 30px;
+	height: 50px;
+    align-items: center;
+}
+
+.info {
+	display: flex;
+    box-sizing: border-box;
+    height: 50%;
+    border: 1px solid hsla(0,0%,51%,.3);
+    border-right: 0;
+    border-left: 0;    
+    justify-content: center;    
+    align-items: center;
+}
+
+.info a {
+	color: black;
+}
+
+.contact-block .fas:before {
+    font-size: 2.1875rem;
+    display: block;
+}
+
+.fas .fa-map-marker-alt:before {
+    font-family: 'FontAwesome';
+    content: "\f3c5";    
+}
+
+.fas .fa-envelope:before {
+    font-family: 'FontAwesome';
+    content: "\f0e0";   
+}
+
+.fas .fa-phone:before {
+    font-family: 'FontAwesome';
+    content: "\f095";    
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;    
+}
