@@ -33,17 +33,21 @@
 }
 
 fieldset {
-    border: none;
-    width: 150px;
+    border: none;    
     padding: 0;
     margin: 0 auto;
     margin-top: 10px;
+    width: 150px;
 }
 
 .login-box {
     background-color: rgba(88, 88, 89,.8);
     padding: 5px;
     margin-top: 5px;
+}
+
+.right-block form {
+    width: 220px;
 }
 
 .form-group input {
@@ -91,6 +95,7 @@ fieldset {
 }
 
 .appear {
+    display: flex;
     opacity: 1;
     transform: scaleY(1);
 }

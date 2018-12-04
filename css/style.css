@@ -16,6 +16,12 @@ body {
 	clear: both;
 }
 
+.appear-block {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
 
 
 
@@ -85,11 +91,21 @@ body {
 
 
 
+@media (min-width: 768px){
+    .menu > li:hover .submenu {
+        opacity: 1;
+        transform: scaleY(1);
+    }
 
+}
 
 
 @media (max-width: 1225px) {
     .header-fixed .section {
+        width: 100%;
+    }
+
+    .header .section {
         width: 100%;
     }
 
@@ -118,6 +134,12 @@ body {
         position: fixed;
         top: 5px;
         z-index: 12;
+        right: 0;
+
+    }
+
+    .right-block #login {
+        background-color: transparent;
     }
 
     #sign-up {
@@ -125,6 +147,8 @@ body {
         font-weight: normal;
         width: 80px;
     } 
+
+
 
 }
 
@@ -148,29 +172,98 @@ body {
 
     .top-menu .block-menu .menu li {
         float: none;
-        background-color: rgba(88, 88, 89,.8);
+        background-color: rgba(88, 88, 89, 1);
         padding-left: 10px;
         width: 130px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        position: relative;
+    }
+    .down-burger {
+        color: white;
+        position: absolute;
+        right: 10px;
+    }
+
+    .top-menu .block-menu .menu li a {
+        color: #ea5a15;
     }
 
     .top-menu .block-menu .menu {
         position: absolute;
-        top: 60px;
+        top: 45px;
         left: 120px;
     }
 
     .top-menu .submenu {
-        left: 150px;
+        left: 135px;
         background: none;
     }
 }
 
 @media (max-width: 768px){
-    .big-search-wrapper {
-        display: none;
+    #big-search-wrapper {
+        right: 45px;
     }
+
+    #search-block {
+       width: 200px; 
+    }    
+
     .small-search {
         display : block;
+        position: absolute;
+        right: 20px;
+    }
+
+    .down-burger {
+        color: white;
+    }
+
+    .page .menu {
+        display: none;
+    }
+    
+    
+    .slider{
+        border: none;
+        width: 100%;
+        height: 0;
+        padding-bottom: 55%; 
+    }
+
+    .slider label span {
+        top: 33%;
+    }
+
+    .slider label span { 
+        font-size: 70pt; 
+    }
+}
+
+@media (max-width: 500px) {
+    #small-logo{
+        display: none;    
+    }
+    .hamburger {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .top-menu .block-menu .menu {
+        position: absolute;
+        left: -25px;
+    }
+
+    .small-search {
+        right: -30px;
+    }
+
+    #big-search-wrapper {
+        right: 0px;
+    }
+
+    #search-block {
+        width: 100px;
     }
 
 }

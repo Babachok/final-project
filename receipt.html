@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<title>Babak</title>
 	<link rel="stylesheet" href="fa/css/all.css">
 	<link rel="stylesheet" href="css/style.css">	
@@ -9,13 +10,64 @@
 <body>
 	<header class = "header-fixed">
 		<div class = "section">
+			<div class = "top-menu hidden" id = "top-menu">
+				<div id = "small-logo">
+					<a href = "index.html">
+						<img alt = "Logo" src="./img/Logo.png">
+					</a>					
+				</div>
+				<input type="checkbox" id="menu-change" hidden>
+				<label for="menu-change" class="hamburger">
+					<span class = "first-span"></span>
+					<span class = "second-span"></span>
+					<span class = "third-span"></span>
+				</label>
+				<div class = "block block-menu">
+					<div class = "content">
+						<ul class = "menu">
+							<li class = "first line">
+								<a href="receipt.html" class="active-trail active">Рецепти</a>
+								<i class="fas fa-chevron-down down-burger" data-chevron = "first-line"></i>
+								<ul class="submenu" id = "first-line">
+		            				<li><a class="filter" data-filter = "first">перші страви</a></li>
+		            				<li><a class="filter" data-filter = "second">другі страви</a></li>
+		            				<li><a class="filter" data-filter = "third">десерти</a></li>
+		          				</ul>
+							</li>
+							<li class = "second line">
+								<a href="index.html#contact-block" title="" class="active-trail active">Контакти</a>
+								<i class="fas fa-chevron-down down-burger" data-chevron = "second-line"></i>
+								<ul class="submenu" id = "second-line">
+		            				<li><a href="index.html#contact-block">телефон</a></li>
+		            				<li><a href="index.html#contact-block">пошта</a></li>
+		            				<li><a href="index.html#contact-block">адрес</a></li>
+		          				</ul>
+							</li>
+							<li class = "last line">
+								<a href="#" title="" class="active-trail active">Партнери</a>
+								<i class="fas fa-chevron-down down-burger" data-chevron = "third-line"></i>
+								<ul class="submenu" id = "third-line">
+		            				<li><a href="">bestfood.com</a></li>
+		            				<li><a href="">smachno.net</a></li>
+		            				<li><a href="">niamniam.net</a></li>
+		          				</ul>
+							</li>
+						</ul>
+					</div>							
+				</div>
+			</div>
 			<div class="block block-search">
-				<div class = "form-search-block">					
+				<div class = "small-search">
+						<button id="small-button-search" class="small-button-search fas fa-search"></button>
+				</div>
+				<div id = "big-search-wrapper">
+				<div class = "big-search-block">						
 					<input title="Enter search word" type="text" id="search-block" name="search_block_form" value="" size="40" maxlength="128" class="form-text">
 					<label for="search-block"></label>
 				</div>
 				<div class = "button-wrapper">
 					<button id = "button-search" class="button-search fas fa-search"></button>
+				</div>
 				</div>				
 			</div>
 		</div>		

@@ -21,7 +21,7 @@ function addReceipt (){
 	receiptWrapper.classList.add("receipt-wrapper");
 	let receiptImage = document.createElement("div");
 	receiptWrapper.appendChild(receiptImage);
-	receiptImage.classList.add("receipt-image");
+	receiptImage.classList.add("receipt-image");	
 	let img = document.createElement("img");
 	receiptImage.appendChild(img);
 	img.setAttribute('src', posts[post_id].src);
@@ -29,9 +29,9 @@ function addReceipt (){
 	postBody.innerHTML = posts[post_id].body;
 	receiptWrapper.appendChild(postBody);
 	let userName = document.createElement("div");
-	receiptWrapper.appendChild(userName);
+	receiptsPostItem.appendChild(userName);
 	userName.innerHTML = posts[post_id].username;
-	userName.classList.add("username");
+	userName.classList.add("username");	
 	let commentWrapper = document.createElement('div');
 	receiptsPostItem.appendChild(commentWrapper);
 	for (let j = 0; j < comments.length; j++){
@@ -43,4 +43,36 @@ function addReceipt (){
 				commentWrapper.appendChild(ul);								
 			}				
 		}
+	let addComment = document.createElement("div");	
+		addComment.setAttribute('id', 'new-comment');
+		addComment.classList.add('read-more');
+		addComment.innerHTML = "Додати коментар";
+		receiptsPostItem.appendChild(addComment);
+}
+
+let topMenu = document.getElementById("top-menu");
+window.onscroll = function() {	
+	let scrolled = document.documentElement.scrollTop;
+  if (window.innerWidth > 768) {
+    if (scrolled > 50) {
+    	topMenu.classList.add('appear');      
+    } else {
+    	topMenu.classList.remove('appear');
+    }    
+  }
+}
+
+if (window.innerWidth < 768) {	
+	topMenu.classList.add('appear');
+	let chevronDown = document.getElementsByClassName("down-burger");
+	console.log(chevronDown);
+	for (i=0; i<chevronDown.length; i++){		
+		chevronDown[i].onclick = function() {		
+		let chevron = this.getAttribute("data-chevron");
+			console.log(chevron);
+		let subMenu = document.getElementById(chevron);	
+		subMenu.classList.toggle("appear-block");
+		};
+	}
+
 }

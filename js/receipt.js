@@ -88,17 +88,20 @@ function RenderList () {
 		let receiptImage = document.createElement("div");
 		receiptWrapper.appendChild(receiptImage);
 		receiptImage.classList.add("receipt-image");
+		let aImg = document.createElement("a");
+		receiptImage.appendChild(aImg);
+		aImg.setAttribute('href', 'singlereceipt.html#receipt_' + (posts[i].id-1));
 		let img = document.createElement("img");
-		receiptImage.appendChild(img);
+		aImg.appendChild(img);
 		img.setAttribute('src', posts[i].src);
 		let postBody = document.createElement("p");
 		postBody.innerHTML = posts[i].body;
 		receiptWrapper.appendChild(postBody);
 		let userName = document.createElement("div");
-		receiptWrapper.appendChild(userName);
+		receiptsPostItem.appendChild(userName);
 		userName.innerHTML = posts[i].username;
 		userName.classList.add("username");
-		var readMore = document.createElement("div");	
+		let readMore = document.createElement("div");	
 		readMore.setAttribute('id', 'read_more_'+i);
 		readMore.classList.add('read-more');
 		readMore.innerHTML = "Детальніше...";
@@ -127,4 +130,36 @@ function RenderList () {
 			}
 		}		
 	addPagination(10, posts.length);
+}
+
+let topMenu = document.getElementById("top-menu");
+window.onscroll = function() {	
+	let scrolled = document.documentElement.scrollTop;
+  if (window.innerWidth > 768) {
+    if (scrolled > 50) {
+    	topMenu.classList.add('appear');      
+    } else {
+    	topMenu.classList.remove('appear');
+    }    
+  }
+}
+
+let buttonSmallSearch = document.getElementById("small-button-search");	
+buttonSmallSearch.onclick = function() {		
+	bigSearchBlock.classList.toggle('appear');		
+}
+
+let bigSearchBlock = document.getElementById("big-search-wrapper");
+if (window.innerWidth < 768) {
+	bigSearchBlock.classList.add('hidden');
+	topMenu.classList.add('appear');
+	let chevronDown = document.getElementsByClassName("down-burger");
+	console.log(chevronDown);
+	for (i=0; i<chevronDown.length; i++){		
+		chevronDown[i].onclick = function() {		
+		let chevron = this.getAttribute("data-chevron");			
+		let subMenu = document.getElementById(chevron);	
+		subMenu.classList.toggle("appear-block");
+		};
+	}
 }

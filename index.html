@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Babak</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<link rel="stylesheet" href="fa/css/all.css">
 	<link rel="stylesheet" href="css/style.css">	
 </head>
@@ -11,7 +12,7 @@
 		<div class = "section">
 			<div class = "top-menu hidden" id = "top-menu">
 				<div id = "small-logo">
-							<a href = "#">
+							<a href = "index.html">
 								<img alt = "Logo" src="./img/Logo.png">
 							</a>					
 						</div>
@@ -26,9 +27,8 @@
 								<ul class = "menu">
 									<li class = "first line">
 										<a href="receipt.html" class="active-trail active">Рецепти</a>
-										<input type = "hidden" id = "post-filter" value="" name = "post-filter">
-										<i class="fas fa-chevron-down"></i>
-										<ul class="submenu">
+										<i class="fas fa-chevron-down down-burger" data-chevron = "first-line"></i>
+										<ul class="submenu" id = "first-line">
 		            						<li><a class="filter" data-filter = "first">перші страви</a></li>
 		            						<li><a class="filter" data-filter = "second">другі страви</a></li>
 		            						<li><a class="filter" data-filter = "third">десерти</a></li>
@@ -36,8 +36,8 @@
 									</li>
 									<li class = "second line">
 										<a href="#contact-block" title="" class="active-trail active">Контакти</a>
-										<i class="fas fa-chevron-down"></i>
-										<ul class="submenu">
+										<i class="fas fa-chevron-down down-burger" data-chevron = "second-line"></i>
+										<ul class="submenu" id = "second-line">
 		            						<li><a href="#contact-block">телефон</a></li>
 		            						<li><a href="#contact-block">пошта</a></li>
 		            						<li><a href="#contact-block">адрес</a></li>
@@ -45,8 +45,8 @@
 									</li>
 									<li class = "last line">
 										<a href="/receipts-list" title="" class="active-trail active">Партнери</a>
-										<i class="fas fa-chevron-down"></i>
-										<ul class="submenu">
+										<i class="fas fa-chevron-down down-burger" data-chevron = "third-line"></i>
+										<ul class="submenu" id = "third-line">
 		            						<li><a href="">bestfood.com</a></li>
 		            						<li><a href="">smachno.net</a></li>
 		            						<li><a href="">niamniam.net</a></li>
@@ -114,7 +114,10 @@
 	  						</div>
 	  						<div class = "form-group">
 	  							<label for="email">Пошта</label>
-	   							<input type="email" id = "email" placeholder="Введіть email">
+	  							<div class = "input-wrapper">
+		  							<i class="fas fa-envelope"></i>
+		   							<input type="email" id = "email" placeholder="Введіть email">
+	   							</div>
 	   						</div>	
 	  						<div class = "form-group">
 		  						<label for="password-registr">Пароль</label>
@@ -142,7 +145,8 @@
 								<li class = "first line">
 									<a href="receipt.html" class="active-trail active">Рецепти</a>
 									<input type = "hidden" id = "post-filter" value="" name = "post-filter">
-									<i class="fas fa-chevron-down"></i>
+									<i class="fas fa-chevron-down"></i>							
+									<input type = "hidden" id = "chevron-filter" value="" name = "chevron-filter">
 									<ul class="submenu">
 	            						<li><a class="filter" data-filter = "first">перші страви</a></li>
 	            						<li><a class="filter" data-filter = "second">другі страви</a></li>
@@ -195,7 +199,8 @@
 							</div>
 						</div>
 						<div id = "sort">
-							<button id = "button-sort">Відсортувати за алфавітом</button>
+							<button class = "button-sort" id = "down" >А &#8594; Я</button>
+							<button class = "button-sort" id = "up" >Я &#8594; А</button>
 							<input type = "hidden" id = "sort-filter" value="" name = "sort-filter">
 						</div>
 					</div>
@@ -211,8 +216,7 @@
 							</ul>
 						</div>						
 					</div>
-					<section>
-				
+					<section>				
 				<div class="wrapper-contact-block" id = "contact-block">
                     <div class="contact-block" >
                         <div class="fas fa-phone"></div>
@@ -234,7 +238,10 @@
                     </div>
                 </div>                
                 <div class="map-responsive">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.092462289435!2d30.518551949965026!3d50.42074889728697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf180e6c43e9%3A0x3a9ea5534d4bd9a3!2z0J_QsNC70LDRhiAi0KPQutGA0LDRl9C90LAi!5e0!3m2!1suk!2sua!4v1537083356484" width="600" height="450" style="border:0" allowfullscreen>			
+                	<div class = "map">
+                	<img alt = "map" src="./img/map.jpg">	
+                	</div>
+					<iframe id = "googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.092462289435!2d30.518551949965026!3d50.42074889728697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf180e6c43e9%3A0x3a9ea5534d4bd9a3!2z0J_QsNC70LDRhiAi0KPQutGA0LDRl9C90LAi!5e0!3m2!1suk!2sua!4v1537083356484" width="600" height="450" style="border:0" allowfullscreen>			
 					</iframe> 
 				</div>
 			</section>	

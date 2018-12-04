@@ -153,6 +153,7 @@ const post_list = [
     "userId": 2,
     "category": "first",
     "id": 16,
+    "username": "Kamren",
     "ingredients": "помідори,\nкурка,\nсіль",
     "src": "./img/solyanka_s_kopchenoy_kuricey8.jpg",
     "title": "Солянка",

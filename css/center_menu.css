@@ -58,6 +58,7 @@ ul {
 
 .menu .submenu li a:hover {
 	  color: #fdfbfa;
+      cursor: pointer;
 }
 
 .menu .submenu li{
@@ -94,10 +95,7 @@ ul {
   	border-bottom: none; 
 }
 
-.menu > li:hover .submenu {
-    opacity: 1;
-    transform: scaleY(1);
-}
+
 
 .second .submenu{
   	left: 175px;

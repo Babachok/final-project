@@ -73,3 +73,15 @@
 	cursor: pointer;
 	background-color: #ea5a15;
 }
+
+/*sort*/
+#sort {
+    width: 130px;
+    margin: 30px auto;     
+}
+
+.button-sort {
+    background-color: #ea5a15;
+    color: white;
+    border: none;
+}

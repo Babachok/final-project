@@ -33,9 +33,7 @@
 }
 
 .username {
-    position: absolute;
-    top: 150px;
-    right: 100px;
+    margin-top: 10px;
 }
 
 .comments {
@@ -48,7 +46,7 @@
 .receipts-post-item {
     position: relative;
     background-color: #ebccbd;
-    padding: 15px;
+    padding: 25px;
     margin-bottom: 30px;
     border-radius: 20px;
     box-shadow: 3px 7px 13px 2px rgba(3,59,49,0.3);
@@ -75,9 +73,12 @@ h3 {
 
 .read-more {
     position: absolute;
-    right: 30px;
-    top: 180px;
+    right: 30px;    
     cursor: pointer;
     color: #ea5a15;
     font-family: georgia,"times new roman",times,serif;
+}
+
+.comments ul {
+    margin-top: 25px;
 }
